@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<table border="1">
+    {% for i in table -%}
+    <tr>
+        {% for j in i -%}
+        <td>{{j}}</td>
+        {%- endfor %}
+    </tr>
+    {%- endfor %}
+
+</table>
+</body>
+</html>
