@@ -6,7 +6,6 @@ message-extraction.ini
 setup.cfg
 setup.py
 auinternal/__init__.py
-auinternal/resources.py
 auinternal/tests.py
 auinternal/views.py
 auinternal.egg-info/PKG-INFO
@@ -19,4 +18,5 @@ auinternal.egg-info/top_level.txt
 auinternal/static/favicon.ico
 auinternal/static/pyramid.png
 auinternal/static/theme.css
+auinternal/templates/home.jinja2
 auinternal/templates/mytemplate.jinja2

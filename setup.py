@@ -10,7 +10,8 @@ requires = [
     'pyramid>=1.0.2',
     'pyramid_jinja2',
     'pyramid_debugtoolbar',
-    'waitress'
+    'waitress',
+    'requests'
 ]
 
 setup(name='auinternal',

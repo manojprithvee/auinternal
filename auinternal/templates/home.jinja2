@@ -6,12 +6,12 @@
 </head>
 <body>
 <table border="1">
+    {% for j in range(len)  -%}
+        <tr>
     {% for i in table -%}
-    <tr>
-        {% for j in i -%}
-        <td>{{j}}</td>
-        {%- endfor %}
-    </tr>
+        <td>{{i[j]}}</td>
+    {%- endfor %}
+        </tr>
     {%- endfor %}
 
 </table>
