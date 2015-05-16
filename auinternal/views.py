@@ -1,6 +1,7 @@
 from pyramid.view import view_config
 import pymongo
 from pyramid.response import Response
+from student import student
 conn=pymongo.MongoClient()
 db=conn.student
 
@@ -9,13 +10,20 @@ def my_view(request):
     return {'project': 'auinternal'}
 
 
-@view_config(route_name="table", renderer='templates/home.jinja2')
+@view_config(route_name="table", renderer='templates/table.jinja2')
 def table(request):
-    find=db.student.find_one({'_id':'110113205003'})
+    id=request.POST.items()
+    find=db.student.find_one({'_id':str(id[0][1])})
     return dict(title='table', table=find['iassmark'],len=len(find['iassmark'][1]))
 
 
-@view_config(route_name='formcheck', renderer='templates/home.jinja2')
+
+@view_config(route_name="login", renderer='templates/login.jinja2')
+def login(request):
+    return ()
+
+
+@view_config(route_name='formcheck', renderer='templates/table.jinja2')
 def form(request):
     maonj=request.POST.items()
     return dict(title='table', table=maonj ,len=2)
@@ -32,6 +40,5 @@ def myview(request):
         manoj=session['abc']
         session.invalidate()
         return Response(manoj)
-
     else:
         return Response('Fred was not in the session')
