@@ -119,6 +119,7 @@ class students:
                 tree = html.fromstring(soup.prettify())
                 profile = tree.xpath('//response/@value')
                 d['profile'] = profile
+#======================thread implementation=======================
                 therds = []
                 p2 = threading.Thread(target=self.elective, args=(d, ))
                 therds.append(p2)
@@ -132,6 +133,7 @@ class students:
                 therds.append(p6)
                 [i.start() for i in therds]
                 [i.join() for i in therds]
+#======================normal implementation=======================
                 # self.elective(d)
                 # self.iamark(d)
                 # self.iassmark(d)
