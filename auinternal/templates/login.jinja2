@@ -1,14 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-<form method="post" action="/table">
-    <label>username:</label><input type="text" name="user"><br>
-    <label>password</label><input type="password" name="password"><br>
-    <input type="submit" name="login" value="manoj">
-</form>
-</body>
-</html>
+<!-- saved from url=(0043)http://getuikit.com/docs/layouts_login.html -->
+<html lang="en-gb" dir="ltr" class="uk-height-1-1 uk-notouch"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Login layout example - UIkit documentation</title>
+        <link rel="stylesheet" href="http://getuikit.com/docs/css/uikit.docs.min.css">
+        <script src="{{request.static_url('auinternal:static/jquery.js')}}"></script>
+        <script src="{{request.static_url('auinternal:static/uikit.min.js')}}"></script>
+    <style>
+body {
+    width: 100%;
+    height: 100%;
+  /* Location of the image */
+  background-image: url("{{request.static_url('auinternal:static/bg.jpg')}}");
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+    </style>
+    </head>
+
+    <body>
+<div class="uk-height-1-1">
+        <div class="uk-vertical-align uk-text-center uk-height-1-1">
+            <div class="uk-vertical-align-middle uk-width-medium-2-5 uk-push-1-5" style="width: 300px" >
+
+
+                <form class="uk-panel uk-panel-box uk-form" method="post" action="/table">
+                    <div class="uk-form-row">
+                        <input class="uk-width-1-1 uk-form-large" type="text" name="user" autocomplete="off" placeholder="Register Number">
+                    </div>
+                    <div class="uk-form-row">
+                        <button class="uk-width-1-1 uk-button uk-button-primary uk-button-large" >Submit</buttom>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+</div>
+</body></html>
